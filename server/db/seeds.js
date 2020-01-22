@@ -12,4 +12,4 @@ db.hotel.insertMany([
     email: "bobby@jimmy.com",
     checkedIn: false
   }
-])
+]);

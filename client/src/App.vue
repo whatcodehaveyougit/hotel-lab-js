@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <customer-form />
-    <customers-list />
+    <h1>Hotel California</h1>
+    <booking-form />
+    <bookings-list />
   </div>
 </template>
 
 <script>
-import CustomerForm from './components/CustomerForm.vue'
-import CustomersList from './components/CustomersList.vue'
+import BookingForm from './components/BookingForm.vue'
+import BookingsList from './components/BookingsList.vue'
 
 export default {
   name: 'app',
   components: {
-    'customer-form': CustomerForm,
-    'customers-list': CustomersList
+    'booking-form': BookingForm,
+    'bookings-list': BookingsList
   }
 }
 </script>
