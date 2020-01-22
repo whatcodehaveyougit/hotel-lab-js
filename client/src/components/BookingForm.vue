@@ -1,28 +1,28 @@
 <template>
   <div>
-    <form class="" action="index.html" method="post">
+    <form class="" action="index.html" v-on:submit="createBooking" method="post">
 
-      <label for="name" :name="name" >Name</label>
-      <input class="input" type="text" name="name" value="">
+      <label for="name" >Name</label>
+      <input class="input" type="text" v-model="name" name="name" >
 
-      <label for="email" :email="email" >Email</label>
-      <input class="input" type="text" name="name" value="">
+      <label for="email" >Email</label>
+      <input class="input" type="text" name="name" v-model="email" >
 
       <label for="">Arrival Date</label>
-      <input class="input" :startDate="startDate" type="date" name="" value="">
+      <input class="input" v-model="startDate" type="date" >
 
       <label for="">Departure Date</label>
-      <input class="input" :endDate="endDate" type="date" name="" value="">
+      <input class="input" v-model="endDate" type="date">
 
-      <input class="input" type="submit" v-on:click="createBooking" name="" value="Create Booking">
+      <input class="input" type="submit" value="Create Booking">
 
     </form>
   </div>
 </template>
 
 <script>
-
 import BookingsServices from '../services/BookingsServices.js'
+import { eventBus } from '../main'
 
 export default {
   name: "customer-form",
